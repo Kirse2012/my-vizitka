@@ -1,0 +1,97 @@
+<PlayerScreen>:
+    orientation:"vertical"
+    spacing:10
+    padding:[24,40,24,24]
+
+    canvas.before:
+        Color:
+            rgba:0.239, 0.078, 0.078, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        source: "Avatar.jpg"
+        size_hint:None,None
+        size:390,500
+        pos_hint:{'center_x':0.5}
+        allow_stretch: True
+        keep_ratio: True
+    Label:
+        text: "Валентин"
+        font_size: '18sp'
+        size_hint_y: None
+        height: 30
+        bold:True
+
+    GridLayout:
+        cols: 3
+        spacing: 10
+        size_hint_y: None
+        height: 150
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 8
+            canvas.before:
+                Color:
+                    rgba: 0.13, 0.13, 0.24, 1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [12]
+            Label:
+                text: 'Город'
+                font_size: '13sp'
+                color: 0.6, 0.7, 0.9, 1
+                size_hint_y: 0.45
+            Label:
+                text: 'Москва'
+                font_size: '16sp'
+                bold: True
+                color: 1, 1, 1, 1
+                size_hint_y: 0.55
+            Label:
+                text: 'Хобби'
+                font_size: '13sp'
+                color: 0.6, 0.7, 0.9, 1
+                size_hint_y: 0.45
+            Label:
+                text: 'Гулять с собакой'
+                font_size: '16sp'
+                bold: True
+                color: 1, 1, 1, 1
+                size_hint_y: 0.55
+            Label:
+                text: 'Контакт'
+                font_size: '13sp'
+                color: 0.6, 0.7, 0.9, 1
+                size_hint_y: 0.45
+            Label:
+                text: '+78906538092'
+                font_size: '16sp'
+                bold: True
+                color: 1, 1, 1, 1
+                size_hint_y: 0.55
+
+
+    Widget:
+        size_hint_y: 1
+
+
+    Button:
+        id: greeting_btn
+        text: 'Привет!'
+        font_size: '20sp'
+        size_hint_y: None
+        height: 52
+        background_color: 0, 0, 0, 0
+        background_normal: ''
+        on_press: root.on_greeting()
+        canvas.before:
+            Color:
+                rgba: 0.18, 0.38, 0.75, 1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [14]
